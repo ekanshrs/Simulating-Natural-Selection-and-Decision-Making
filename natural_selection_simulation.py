@@ -7,9 +7,9 @@ class Environment:
         self.width = width
         self.height = height
         self.grid = [[None for _ in range(width)] for _ in range(height)]
-        self.food_particles = self._place_food(num_food_particles)
+        self.food_particles = self.place_food(num_food_particles)
 
-    def _place_food(self, num_food_particles):
+    def place_food(self, num_food_particles):
         food_positions = []
         for _ in range(num_food_particles):
             x = random.randint(1, self.width - 2)
